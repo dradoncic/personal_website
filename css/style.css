@@ -1,0 +1,72 @@
+body {
+    font-family: monospace;
+    background-color: white;
+    transform: scale(1.2); /* Adjust this value to scale up or down */
+    transform-origin: top left; /* Ensures scaling happens from the top left corner */
+}
+
+section {
+    display: none;
+    padding: 20px;
+    max-width: 600px;
+}
+
+section#home {
+    display: block;
+}
+
+#home {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Reduce the margin between the name and college name */
+}
+
+p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 25px;
+    margin-top: 5px; 
+}
+
+ul#links {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+ul#links li {
+    margin-bottom: 10px;
+}
+
+ul#links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+ul#links a:hover {
+    font-weight: 600;
+}
+
+#contact {
+    list-style-type: none;
+    font-size: 14px;
+    color: black;
+    margin-top: 25px;
+    margin-left: 0px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.home-link:hover {
+    font-weight: 600;
+}

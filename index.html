@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Deen Radoncic </title>
+        <meta name="description" content="Cool Dudes Enjoy Blockchains & Data Science">
+
+        <meta property="og:title" content="Deen Radoncic">
+        <meta property="og:description" content="Cool Dudes Enjoy Blockchains & Data Science">
+        <meta property="og:image" content="img/site-img.jpg">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section id="home">
+            <h1>Deen Radoncic</h1>
+            <p>Stevens Institute of Technology | 2027</p>
+            <ul id="links">
+                <li>
+                    <a href="#resume">resume</a>
+                </li>
+                <li>
+                    <a href="#blog">blog</a>
+                </li>
+                <li>
+                    <a href="https://github.com/dradoncic">code</a>
+                </li>
+            </ul>
+            <li id="contact">dradonci@stevens.edu</li>
+        </section>
+
+        <section id="resume">
+            <a href="#home" class="home-link"><-</a>
+            <p>pending...</p>
+            <!--Add resume content here-->
+        </section>
+        
+        <section id="blog">
+            <img src="img/under_construction.gif" alt="under construction">
+            <!--   
+            <a href="#home" class="home-link"><-</a>
+            <div id="posts" class="section">
+                <div class="post-row">
+                    <p class="post-title">
+                        <a href="#blog1">first blog</a>
+                    </p>
+                    <p class="post-date">9/2/2024</p>
+                </div>
+            </div>
+            <p class="post-subtitle">my first ever blog post...</p>
+            -->
+        </section>
+
+        <section id="blog1">
+            <a href="#blog" class="home-link"><-</a>
+            <p>pending...</p>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const sections = document.querySelectorAll('section');
+                const homeSection = document.getElementById('home');
+    
+                function showSection(target) {
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+    
+                    if (target) {
+                        target.style.display = 'block';
+                    } else {
+                        homeSection.style.display = 'block';
+                    }
+                }
+    
+                window.addEventListener('hashchange', function () {
+                    const target = document.querySelector(window.location.hash);
+                    showSection(target);
+                });
+    
+                if (window.location.hash) {
+                    const target = document.querySelector(window.location.hash);
+                    showSection(target);
+                } else {
+                    homeSection.style.display = 'block';
+                }
+            });
+        </script>
+
+    </body>
+</html>
