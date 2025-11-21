@@ -1,93 +1,108 @@
+<!-- index.html -->
+<!-- Updated index.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deen Radoncic</title>
+    <meta name="description" content="Cool Dudes Enjoy Blockchains & Data Science" />
+    <meta property="og:title" content="Deen Radoncic" />
+    <meta property="og:description" content="Cool Dudes Enjoy Blockchains & Data Science" />
+    <meta property="og:image" content="img/site-img.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet" />
+    <script type="module" src="https://sitring.eric.si/webring.js?id=YOUR_ID_HERE" id="webringjs"></script>
+  </head>
+  <body>
+    <div class="random-art-collage">
+      <img src="img/art1.png" alt="Art 1" />
+      <img src="img/art2.png" alt="Art 2" />
+      <img src="img/art3.png" alt="Art 3" />
+      <img src="img/art4.png" alt="Art 4" />
+      <img src="img/art5.png" alt="Art 5" />
+      <img src="img/art6.png" alt="Art 6" />
+      <img src="img/art7.png" alt="Art 7" />
+      <img src="img/art8.png" alt="Art 8" />
+      <img src="img/art9.png" alt="Art 9" />
+      <img src="img/art10.png" alt="Art 10" />
+      <img src="img/art11.png" alt="Art 11" />
+      <img src="img/art12.png" alt="Art 12" />
+    </div>
 
-        <title> Deen Radoncic </title>
-        <meta name="description" content="Cool Dudes Enjoy Blockchains & Data Science">
-
-        <meta property="og:title" content="Deen Radoncic">
-        <meta property="og:description" content="Cool Dudes Enjoy Blockchains & Data Science">
-        <meta property="og:image" content="img/site-img.jpg">
-
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <section id="home">
-            <h1>Deen Radoncic</h1>
-            <p>Stevens Institute of Technology | 2027</p>
-            <ul id="links">
-                <li>
-                    <a href="#resume">resume</a>
-                </li>
-                <li>
-                    <a href="#blog">blog</a>
-                </li>
-                <li>
-                    <a href="https://github.com/dradoncic">code</a>
-                </li>
-            </ul>
-            <li id="contact">dradonci@stevens.edu</li>
-        </section>
-
-        <section id="resume">
-            <a href="#home" class="home-link"><-</a>
-            <p>pending...</p>
-            <!--Add resume content here-->
-        </section>
-        
-        <section id="blog">
-            <img src="img/under_construction.gif" alt="under construction">
-            <!--   
-            <a href="#home" class="home-link"><-</a>
-            <div id="posts" class="section">
-                <div class="post-row">
-                    <p class="post-title">
-                        <a href="#blog1">first blog</a>
-                    </p>
-                    <p class="post-date">9/2/2024</p>
-                </div>
+    <main class="content-wrapper">
+      <section id="home">
+        <div class="header-content centered">
+          <h1>Deen Radoncic</h1>
+          <p>Stevens Institute of Technology | 2027</p>
+          <ul id="links">
+            <li><a href="#resume">resume</a></li>
+            <li><a href="#blog">blog</a></li>
+          </ul>
+          <div id="contact">
+            <a href="mailto:dradonci@stevens.edu" id="email">dradonci@stevens.edu</a>
+            <div id="social-icons">
+              <a href="https://x.com/deen_radoncic" target="_blank"><img src="img/twitter_logo.png" alt="Twitter" /></a>
+              <a href="https://github.com/dradoncic" target="_blank"><img src="img/github_logo.png" alt="GitHub" /></a>
+              <a href="https://www.linkedin.com/in/deen-radoncic/" target="_blank"><img src="img/linkedin_logo.png" alt="LinkedIn" /></a>
+              <a href="https://www.instagram.com/deenradoncic/" target="_blank"><img src="img/instagram_logo.png" alt="Instagram" /></a>
             </div>
-            <p class="post-subtitle">my first ever blog post...</p>
-            -->
-        </section>
+          </div>
+        </div>
+        <div id="webring"><p></p></div>
+      </section>
 
-        <section id="blog1">
-            <a href="#blog" class="home-link"><-</a>
-            <p>pending...</p>
-        </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const sections = document.querySelectorAll('section');
-                const homeSection = document.getElementById('home');
+      <section id="resume">
+        <a href="#home" class="home-link"><-</a>
+        <p>pending...</p>
+    </section>
     
-                function showSection(target) {
-                    sections.forEach(section => {
-                        section.style.display = 'none';
-                    });
-    
-                    if (target) {
-                        target.style.display = 'block';
-                    } else {
-                        homeSection.style.display = 'block';
-                    }
-                }
-    
-                window.addEventListener('hashchange', function () {
-                    const target = document.querySelector(window.location.hash);
-                    showSection(target);
-                });
-    
-                if (window.location.hash) {
-                    const target = document.querySelector(window.location.hash);
-                    showSection(target);
-                } else {
-                    homeSection.style.display = 'block';
-                }
+    <section id="blog">
+      <a href="#home" class="home-link"><-</a>
+      <div id="posts" class="section"></div>
+    </section>
+  
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const sections = document.querySelectorAll('section');
+          const homeSection = document.getElementById('home');
+
+          const showSection = (target) => {
+            sections.forEach((section) => {
+              section.style.display = 'none';
+              section.style.opacity = '0';
             });
-        </script>
 
-    </body>
+            const sectionToShow = target || homeSection;
+            sectionToShow.style.display = 'block';
+            sectionToShow.offsetHeight;
+            sectionToShow.style.opacity = '1';
+          };
+
+          window.addEventListener('hashchange', () => {
+            showSection(document.querySelector(window.location.hash));
+          });
+
+          showSection(window.location.hash ? document.querySelector(window.location.hash) : null);
+
+          // Floating animation
+          const floatImages = document.querySelectorAll('.random-art-collage img');
+          floatImages.forEach((img, i) => {
+            const floatSpeed = 3 + Math.random() * 3;
+            const floatSize = 10 + Math.random() * 10;
+            img.style.animation = `float${i} ${floatSpeed}s ease-in-out infinite alternate`;
+
+            const style = document.createElement('style');
+            style.textContent = `@keyframes float${i} {
+              0% { transform: translateY(0); }
+              100% { transform: translateY(-${floatSize}px); }
+            }`;
+            document.head.appendChild(style);
+          });
+        });
+      </script>
+      <script src="js/blog-loader.js"></script>
+    </main>
+  </body>
 </html>
